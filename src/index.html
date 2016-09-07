@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<title>ZenPlaces</title>
+	<link rel="stylesheet" href="../dist/css/zenplaces.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<script src="../node_modules/jquery/dist/jquery.js"></script>
+	<script src="js/ratings.js"></script>
+	<script src="js/mapSearch.js"></script>
+</head>
+<body>
+	<div id="zen-header" class="zen-header">
+		<h1>ZenPlaces</h1>
+		<h2>Your search is my command!</h2>
+	</div>
+	<div id="zen-body" class="zen-body">
+		<div id="zen-search" class="zen-search">
+			<div id="search-input" class="search-input">
+				<input 
+					id="search-text" 
+					class="search-text" 
+					type="text" 
+					placeholder="Search for a place..." 
+					oninput="isEnter()">						
+				</input>
+				<button id="search-button" class="search-button" onclick="searchPlaces()">Search</button>
+			</div>
+			<div id="search-results" class="search-results"></div>
+		</div>
+		<div id="zen-map" class="zen-map"></div>
+	</div>
+	<script 
+		type="text/javascript" 
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZyf4-RaNGe9CfVz5Z8U5loCnXdgFJtHk&libraries=places&callback=initMap"
+		async
+		defer
+	></script>
+</body>
+</html>
